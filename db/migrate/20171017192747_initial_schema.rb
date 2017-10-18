@@ -7,7 +7,7 @@ class InitialSchema < ActiveRecord::Migration[5.1]
   		t.string :password
   	end
   	create_table :posts do |t|
-  		t.integer :users
+  		t.integer :user, foreign_key: {to_table: :users}, index: true
   		t.text :body
   		t.integer :calories
   		t.string :type
