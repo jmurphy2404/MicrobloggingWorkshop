@@ -10,27 +10,19 @@ enable :sessions
 
 set :database, {adapter: 'sqlite3', database: 'micro.sqlite3'}
 
-<<<<<<< HEAD
-=======
 #Configure Carrierwave
 CarrierWave.configure do |config|
   config.root = File.dirname(__FILE__) + "/public"
 end
 
+# before do
+# 	current_user
+# end
 
->>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
-before do
-	current_user
-end
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
-#login protection
-before ['/newpost','/profile'] do
-	redirect '/' unless @current_user
-end
+# #login protection
+# before ['/newpost','/profile'] do
+# 	redirect '/' unless @current_user
+# end
 
 get '/' do
 	erb :home
@@ -45,7 +37,7 @@ get '/signup' do
 end
 
 get '/profile' do
-	@posts = Post.all
+	# @posts = Post.all
 	erb :profile
 end
 
