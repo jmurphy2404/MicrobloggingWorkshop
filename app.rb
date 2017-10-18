@@ -10,23 +10,19 @@ enable :sessions
 
 set :database, {adapter: 'sqlite3', database: 'micro.sqlite3'}
 
-<<<<<<< HEAD
-=======
 #Configure Carrierwave
 CarrierWave.configure do |config|
   config.root = File.dirname(__FILE__) + "/public"
 end
 
+def current_user
+	@current_user = User.find(session[:username])if session[:username]
+end
 
->>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
 before do
 	current_user
 end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
 #login protection
 before ['/newpost','/profile'] do
 	redirect '/' unless @current_user
@@ -45,26 +41,22 @@ get '/signup' do
 end
 
 get '/profile' do
-	@posts = Post.all
+	# @posts = Post.all
 	erb :profile
 end
 
 #handle login
 post '/login' do
-	user = User.find_by(user_id: params[:user_id])
-	p user, params 
-	if user && user.password == params[:password]
-		session[:user_id] = user.id
+	@user = User.find_by(username: params[:username])
+	p @user, params 
+	if @user && @user.password == params[:password]
+		session[:username] = @user.id
 		flash[:message] = "Welcome, nerd."
-		redirect '/'
+		redirect '/profile'
 	else
 		flash[:message] = "Ooops, did you forget your account information?  I don't recognize that user/pass combo, you nerd."
 		redirect back
 	end
-end
-
-def current_user
-	@current_user = User.find(session[:user_id])if session[:user_id]
 end
 
 post '/profile' do
