@@ -10,17 +10,23 @@ enable :sessions
 
 set :database, {adapter: 'sqlite3', database: 'micro.sqlite3'}
 
+<<<<<<< HEAD
+=======
 #Configure Carrierwave
 CarrierWave.configure do |config|
   config.root = File.dirname(__FILE__) + "/public"
 end
 
 
+>>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
 before do
 	current_user
 end
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> c2a9de05eb7fb393705b6d640c7f01d4daf7ee5f
 #login protection
 before ['/newpost','/profile'] do
 	redirect '/' unless @current_user
@@ -67,3 +73,4 @@ post '/profile' do
 	post.save
 	redirect '/profile'
 end
+
