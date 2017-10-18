@@ -15,15 +15,19 @@ CarrierWave.configure do |config|
   config.root = File.dirname(__FILE__) + "/public"
 end
 
-# before do
-# 	current_user
-# end
+def current_user
+	@current_user = User.find(session[:username])if session[:username]
+end
 
-# #login protection
-# before ['/newpost','/profile'] do
-# 	redirect '/' unless @current_user
-# end
+before do
+	current_user
+end
 
+#login protection
+before ['/newpost','/profile'] do
+	redirect '/' unless @current_user
+end
+ 
 get '/' do
 	erb :home
 end
@@ -43,20 +47,16 @@ end
 
 #handle login
 post '/login' do
-	user = User.find_by(user_id: params[:user_id])
-	p user, params 
-	if user && user.password == params[:password]
-		session[:user_id] = user.id
+	@user = User.find_by(username: params[:username])
+	p @user, params 
+	if @user && @user.password == params[:password]
+		session[:username] = @user.id
 		flash[:message] = "Welcome, nerd."
-		redirect '/'
+		redirect '/profile'
 	else
 		flash[:message] = "Ooops, did you forget your account information?  I don't recognize that user/pass combo, you nerd."
 		redirect back
 	end
-end
-
-def current_user
-	@current_user = User.find(session[:user_id])if session[:user_id]
 end
 
 post '/profile' do

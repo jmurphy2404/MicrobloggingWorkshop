@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171018191014) do
     t.integer "user"
     t.text "body"
     t.integer "calories"
-    t.string "type"
+    t.string "category"
     t.string "title"
     t.datetime "created_at"
     t.index ["user"], name: "index_posts_on_user"
