@@ -1,3 +1,5 @@
+/*CSS for HOME*/
+
 .homeHeader{
 	font-family: 'Poiret One', cursive;
 	color: white ;
@@ -18,3 +20,186 @@
 	color: #016FB9;
 	margin: 0 auto;
 }
+
+/*CSS for PROFILE*/
+
+.w3-theme-l5{
+	background-color: #016FB9;
+}
+.w3-bar{
+	width:100%;
+	overflow:hidden
+	color:#016FB9;
+	align-items: center;
+}
+.w3-center .w3-bar{
+	display:inline-block;
+	width:auto;
+	font-family: 'Poiret One', cursive;
+}
+.w3-bar .w3-bar-item{
+	padding:8px 16px;
+	float:left;
+	width:auto;
+	border:none;
+	outline:none;
+	display:block
+	color: #016FB9;
+}
+.w3-responsive{
+	overflow-x:auto
+}
+.w3-container:after,
+.w3-container:before,
+.w3-panel:after,
+.w3-panel:before,
+.w3-row:after,
+.w3-row:before,
+.w3-row-padding:after,
+.w3-row-padding:before,
+.w3-cell-row:before,
+.w3-cell-row:after,
+.w3-clear:after,
+.w3-clear:before,
+.w3-bar:after{
+	content:"";
+	display:table;
+	clear:both
+}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{
+	float:left;width:100%
+}
+
+@media (min-width:601px){
+	.w3-col.m1{width:8.33333%
+}
+.w3-col.m2{
+	width:16.66666%
+}
+.w3-col.m3,.w3-quarter{
+	width:24.99999%
+}
+.w3-col.m4,.w3-third{
+	width:33.33333%
+}
+.w3-col.m5{
+	width:41.66666%
+}
+.w3-col.m6,.w3-half{
+	width:49.99999%
+}
+.w3-col.m7{
+	width:58.33333%
+}
+.w3-col.m8,.w3-twothird{
+	width:66.66666%
+}
+
+
+@media (max-width:600px){
+
+
+.w3-hide-small{
+	display:none!important
+}
+.w3-mobile{
+	display:block;width:100%!important
+}
+.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{
+	width:100%
+}}
+.w3-top,.w3-bottom{
+	background-color: #F7F7F4; 
+	position:fixed;width:100%;
+	z-index:1
+}
+.w3-top{
+	top:0
+}
+.w3-bottom{
+	bottom:0
+}
+.w3-round-small{
+	border-radius:2px
+}
+.w3-round,.w3-round-medium{
+	border-radius:4px
+}
+.w3-round-large{
+	border-radius:8px
+}
+.w3-round-xlarge{
+	border-radius:16px
+}
+.w3-round-xxlarge{
+	border-radius:32px
+}
+.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{
+	padding:0 8px
+}
+.w3-container,.w3-panel{
+	padding:0.01em 16px
+}
+.w3-panel{
+	margin-top:16px;
+	margin-bottom:16px
+}
+.w3-left-align{
+	text-align:left!important; padding-left: 0;
+}
+.w3-right-align{
+	text-align:right!important
+}
+.w3-justify{
+	text-align:justify!important
+}
+.w3-center{
+	text-align:center!important
+}
+.w3-border-0{
+	border:0!important
+}
+.w3-border{
+	border:1px solid #ccc!important
+}
+.w3-border-top{
+	border-top:1px solid #ccc!important
+}
+.w3-border-bottom{
+	border-bottom:1px solid #ccc!important
+}
+.w3-border-left{
+	border-left:1px solid #ccc!important
+}
+.w3-border-right{
+	border-right:1px solid #ccc!important
+}
+.w3-margin{
+	margin:16px!important
+}
+.w3-margin-top{
+	margin-top:16px!important
+}
+.w3-margin-bottom{
+	margin-bottom:16px!important
+}
+.w3-margin-left{
+	margin-left:16px!important
+}
+.w3-margin-right{
+	margin-right:16px!important
+}
+.w3-padding-small{
+	padding:4px 8px!important
+}
+.w3-padding{
+	padding:8px 16px!important
+}
+.w3-padding-large{
+	padding:12px 24px!important
+}
+.w3-button:hover{
+	color:#000!important;
+	background-color:#ccc!important}
+
+
