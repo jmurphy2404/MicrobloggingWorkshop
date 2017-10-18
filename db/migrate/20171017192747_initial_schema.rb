@@ -10,7 +10,7 @@ class InitialSchema < ActiveRecord::Migration[5.1]
   		t.integer :user, foreign_key: {to_table: :users}, index: true
   		t.text :body
   		t.integer :calories
-  		t.string :type
+  		t.string :category
   		t.string :title
   		t.datetime :created_at
   	end
