@@ -25,6 +25,8 @@
 
 .w3-theme-l5{
 	background-color: #016FB9;
+	font-family: 'Poiret One', cursive;
+
 }
 .w3-bar{
 	width:100%;
@@ -49,7 +51,11 @@
 .w3-responsive{
 	overflow-x:auto
 }
-.w3-container:after,
+.w3-container:after{
+	box-shadow: 10px 10px 5px #888888;
+	transform: scale(1.1);
+	transition: all 1s;
+}
 .w3-container:before,
 .w3-panel:after,
 .w3-panel:before,
@@ -201,5 +207,36 @@
 .w3-button:hover{
 	color:#000!important;
 	background-color:#ccc!important}
+.PL{
+	font-weight: bold;
+}
 
+
+/*CSS for LOGIN*/
+
+.loginText{
+	font-family: 'Poiret One', cursive;
+	color: #22AED1 ;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.loginH1{
+	font-size: 60px;
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	color: #F7F7F4; 
+	text-align: center;
+	align-items: center;
+}
+
+.loginForm{
+	border-style: solid;
+	border-color: #22AED1;
+	border-radius: 3px;
+	padding: 30px;
+	margin-left: 200px;
+	margin-right: 200px;
+	background-color: #F7F7F4;
+}
 

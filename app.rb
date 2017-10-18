@@ -27,7 +27,7 @@ end
 before ['/newpost','/profile'] do
 	redirect '/' unless @current_user
 end
-
+ 
 get '/' do
 	erb :home
 end
