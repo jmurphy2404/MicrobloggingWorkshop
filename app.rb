@@ -6,14 +6,14 @@ require 'sinatra/flash'
 
 set :database, {adapter: 'sqlite3', database: 'micro.sqlite3'}
 
-before do
-	current_user
-end
+# before do
+# 	current_user
+# end
 
-#login protection
-before ['/questions/new','/questions'] do
-	redirect '/' unless @current_user
-end
+# #login protection
+# before ['/questions/new','/questions'] do
+# 	redirect '/' unless @current_user
+# end
 
 get '/' do
 	erb :home
