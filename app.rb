@@ -78,9 +78,17 @@ post '/signup' do
 end
 
 post '/newpost' do
-	accepted_keys = %w(title body type calories)	
-	post = Post.new params.select{|k| accepted_keys.include? k}
-	post.save
+	valid_keys = %w(title body category calories)	
+	new_post = Post.new params.select{|k| valid_keys.include? k}
+	# new_post = Post.new {
+	# 	user: @current_user.id,
+	# 	body: params[:body],
+	# 	calories: params[:calories],
+	new_post.user_id = @current_user.id
+	new_post.created_at = DateTime.now
+	# }
+	p new_post
+	new_post.save!
 	redirect '/profile'
 end
 
