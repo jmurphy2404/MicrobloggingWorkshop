@@ -27,7 +27,7 @@ end
 before ['/newpost','/profile'] do
 	redirect '/' unless @current_user
 end
- 
+
 get '/' do
 	erb :home
 end
@@ -41,8 +41,9 @@ get '/signup' do
 end
 
 get '/profile' do
+	 # @user = User.all
 	# @posts = Post.all
-	erb :profile
+	erb :profile, locals: {user: @current_user} 
 end
 
 #handle login
