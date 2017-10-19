@@ -10,7 +10,6 @@
  </div>
 </div>
 
-
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
   <!-- The Grid -->
@@ -21,7 +20,9 @@
       <div class="w3-card-2 w3-round w3-white" style="background-color: #F7F7F4;">
         <div class="w3-container">
          <h4 class="w3-center" style="font-size: 20px; font-weight: bold;">My Profile</h4>
-         <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <% if @current_user %>
+         <p class="w3-center"><img src="<%= user.avatar.url %>" class="w3-circle" style="height:115px;width:106px; border-radius: 50%;" alt="Avatar"></p>
+         <% end %> 
          <hr>
          <p> Sophie Bushman</p>
          <p> Brookyln, NY</p>
@@ -50,7 +51,7 @@
         </div>
       </div>
       
-      <div class="w3-container w3-card-2 w3-white w3-round w3-margin" style="background-color: #F7F7F4;"><br>
+      <div class="w3-container w3-card-2 w3-white w3-round w3-margin" style="background-color: #F7F7F4"><br>
         <span class="w3-right w3-opacity">Yesterday</span>
         <h4 class="PL">Past Log:</h4>
         <hr class="w3-clear">
