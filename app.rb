@@ -63,7 +63,7 @@ post '/login' do
 		flash[:message] = "Welcome, nerd."
 		redirect '/profile'
 	else
-		flash[:message] = "Ooops, did you forget your account information?  I don't recognize that user/pass combo, you nerd."
+		flash[:message] = "Ooops, did you forget your account information?  That Username/Password combo doesn't match!"
 		redirect back
 	end
 end

@@ -3,7 +3,6 @@
 .homeHeader{
 	font-family: 'Poiret One', cursive;
 	color: white ;
-	text-align: center;
 	font-size: 60px;
 	}
 
@@ -141,7 +140,7 @@
 	border-radius:32px
 }
 .w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{
-	padding-right: 8px
+	padding:0 8px
 }
 .w3-container,.w3-panel{
 	padding:0.01em 16px
@@ -240,3 +239,55 @@
 	background-color: #F7F7F4;
 }
 
+/*Log Button*/
+
+.logButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #016fb9), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #016fb9 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #016fb9 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #016fb9 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #016fb9 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #016fb9 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#016fb9', endColorstr='#408c99',GradientType=0);
+	background-color:#016fb9;
+	border:10px solid #4abcd9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Poiret One', cursive;
+	font-size:28px;
+	font-weight:bold;
+	padding:18px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.logButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #016fb9));
+	background:-moz-linear-gradient(top, #408c99 5%, #016fb9 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #016fb9 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #016fb9 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #016fb9 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #016fb9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#016fb9',GradientType=0);
+	background-color:#408c99;
+}
+.logButton:active {
+	position:relative;
+	top:1px;
+}
+
+/*New Post Page*/
+.logBackground{
+	background-color: #F7F7F4;
+	border-color: #4ABCD9;
+	border-radius: 10px;
+	padding-right: 150px;
+	margin-right: 800px;
+	font-family: 'Poiret One', cursive;
+	font-size: 25px;
+	font-weight: bold;
+	color: #4ABCD9;
+}
