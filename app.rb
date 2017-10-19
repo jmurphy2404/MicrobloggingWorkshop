@@ -60,6 +60,15 @@ post '/login' do
 	end
 end
 
+#handle signup
+
+post '/signup' do
+	accepted_keys = %w(fname lname age password username avatar)
+	new_user = User.new params.select{|k| accepted_keys.include? k}
+	new_user.save
+	redirect '/login'
+end
+
 post '/profile' do
 	accepted_keys = %w(title body type calories)	
 	post = Post.new params.select{|k| accepted_keys.include? k}
