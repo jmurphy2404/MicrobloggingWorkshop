@@ -40,6 +40,14 @@ get '/signup' do
 	erb :signup
 end
 
+get '/loggedout' do
+	erb :loggedout
+end
+
+get '/newpost' do
+	erb :newpost
+end
+
 get '/profile' do
 	 # @user = User.all
 	# @posts = Post.all
@@ -69,10 +77,16 @@ post '/signup' do
 	redirect '/login'
 end
 
-post '/profile' do
+post '/newpost' do
 	accepted_keys = %w(title body type calories)	
 	post = Post.new params.select{|k| accepted_keys.include? k}
 	post.save
 	redirect '/profile'
+end
+
+
+get '/logout' do
+	session[:username] = nil
+	redirect '/loggedout'
 end
 
