@@ -49,8 +49,7 @@ get '/newpost' do
 end
 
 get '/profile' do
-	 # @user = User.all
-	# @posts = Post.all
+	@posts = Post.all.reverse
 	erb :profile, locals: {user: @current_user} 
 end
 
